@@ -1,0 +1,17 @@
+Для базы данных используется база PostgreSQL
+
+Наполнение
+
+Create database daysfactory
+
+Create table days
+(
+	id_days int primary key not null,
+   	date_factory date not null unique,
+	type_day varchar(25) not null
+)
+-- Тип дня имеет две позиции weekend и workday и заполняется в соответствии
+ с производственным календарем
+insert into days values 
+(1, '2023-01-01', 'weekend'),
+(2, '2023-01-02', 'weekend'),
